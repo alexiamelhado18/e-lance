@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-lance - Criar Conta</title>
+
+    <!-- Logo na barra de endereço do navegador -->
+    <link rel="shortcut icon" type="imagex/png" href="./images/logo.ico">
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/cadastro.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Google font -> Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- inicio cabeçalho -->
+  <header class="w-100 d-flex flex-column align-items-center justify-content-between">
+    <nav class="navbar pb-0" style="justify-content:space-between; width: 80%;flex-wrap: revert;">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" width="150" class="d-inline-block align-top" alt="">
+      </a>
+
+      <div class="d-flex justify-content-btween align-items-center">
+        <img src="images/user-icon.png" class="mr-2" alt="">
+        <div class="d-flex flex-column">
+          <a class="font-weight-bold p-0 m-0 link" href="login.html" id="acessar-conta">Acessar conta</a>
+          <a class="font-weight-bold p-0 m-0 link" id="nome-usuario"></a>
+          <a class="font-weight-bold p-0 m-0 link" href="cadastro.html" id="cadastrar">Cadastre-se</a>
+          <a class="font-weight-bold p-0 m-0 link" href="areaUsuario.html" id="areaUsuario" style="display:none;">Área
+            usuário</a>
+          <a class="font-weight-bold p-0 m-0 link" href="login.html" id="logout" style="display:none;">Sair</a>
+        </div>
+      </div>
+    </nav>
+    <nav class="w-100 d-flex align-items-center" style="background:var(--preto);" id="navOptions">
+      <a class="p-3" href="index.html" style="color: var(--branco);">Home</a>
+      <a class="p-3" href="leiloes.html" style="color: var(--branco);">Leilões</a>
+    </nav>
+  </header>
+  <!-- fim do cabeçalho -->
+
+    <h1 class="text-center font-weight-bold" novalidate style="padding-top: 20px;font-family: 'Roboto', sans-serif;">
+        Criar conta</h1>
+    <form id="dados-cadastro" class="d-flex flex-column justify-content-center align-items-center"
+        style="padding: 20px;">
+        <section class="campos-cadastro-usuario col-11 col-md-8" style="display: flex;justify-content: space-between;">
+            <div class="d-flex flex-column col-12 col-sm-6">
+                <div class="mb-3">
+                    <label for="">Digite seu nome</label>
+                    <input id="nome" type="text" class="form-control" name="nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="">Sobrenome</label>
+                    <input type="text" id="sobrenome" class="form-control" name="sobrenome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="">CEP</label>
+                    <input type="text" id="cep" class="form-control" name="cep" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" class="form-control" name="cidade" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="">Estado</label>
+                    <input type="text" id="estado" class="form-control" name="estado" readonly>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column col-12 col-sm-6">
+                <div class="d-flex">
+                    <div class="mb-3 w-100">
+                        <label for="" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" name="endereco" readonly>
+                    </div>
+
+                    <div class="mb-3 pl-2" style="width: 30%;">
+                        <label for="" class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="numero" name="numero" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="E-mail">E-mail</label>
+                    <input class="form-control" type="text" name="e-mail" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="senha">Senha</label>
+                    <input class="form-control" type="password" name="senha" id="senha" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confimarSenha">Confirmar Senha</label>
+                    <input class="form-control" type="password" name="confimarSenha" id="confimarSenha" required>
+                </div>
+                <div class="mb-3">
+                    <label for="">Qual perfil você seria?</label>
+                    <div class="d-flex">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="" value="vendedor">
+                            <label class="form-check-label" for="inlineRadio1">Vendedor</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="" value="comprador">
+                            <label class="form-check-label" for="inlineRadio2">Comprador</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="d-flex justify-content-center">
+            <button type="reset" class="btn font-weight-bold mr-4"
+                style="background: var(--cinza-escuro);color: var(--branco);">Limpar</button>
+            <button id="btnSubmit" type="submit" class="btn font-weight-bold"
+                style="background: var(--amarelo-esverdeado);color: var(--branco);">Cadastrar</button>
+        </div>
+    </form>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script src="scripts/colocaUsuarioNoHeader.js" type="text/javascript"></script>
+    <script src="scripts/cadastro.js" type="text/javascript"></script>
+    <script src="scripts/logout.js" type="text/javascript"></script>
+</body>
+
+</html>

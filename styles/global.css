@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --azul: #116FFF;
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --cinza-escuro: #282828;
+    --amarelo-esverdeado: #C3EB1E;
+}
+
+header{
+    background: var(--azul);
+}
+.link{
+    color: var(--preto);
+}
+footer{
+    background:var(--preto);
+    min-height: 70px;
+}
+footer > h6{color: var(--branco);}
+
+@media only screen and (max-width: 425px) {
+    .navbar{width: 100% !important;}
+    .navbar-brand > img{width: 100PX;}
+
+}

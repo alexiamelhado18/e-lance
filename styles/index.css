@@ -1,0 +1,25 @@
+.btn-details{
+    background: var(--cinza-escuro);
+    color: var(--branco);
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.item > p{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.owl-carousel .owl-item img{
+    height:285px;
+    width:100%;
+}
+
+@media only screen and (min-width: 1503px) {
+    body{
+        height: 100vh;
+    }
+}
